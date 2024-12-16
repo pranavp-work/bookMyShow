@@ -1,6 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
+
+
+// on clicking seats, button for booking will appear otherwise hidden
 
 function SeatSelection() {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
     return (
         <>
             <div className='container'>
@@ -83,6 +97,42 @@ function SeatSelection() {
                     <div className="col-md-2"></div>
                 </div>
 
+
+            </div>
+
+            <div className=' px-5 d-flex justify-content-center align-items-center border-1 shadow py-3'>
+                <button className='btn btn-danger w-25' onClick={handleShow}>Pay Amount</button>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Notes</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        1. Seat layout page for PVR cinemas is for representational purposes only and actual seat layout might vary.
+                        2. Tickets are compulsory for children of 3 years & above.
+                        3. Patrons below the age of 18 years cannot be admitted for movies certified A.
+                        4. For 3D movies, ticket price includes charges towards usage of 3D glasses.
+                        10. In case a ticket is lost or misplaced, a duplicate ticket cannot be issued.
+                        11. Tickets once purchased cannot be cancelled, exchanged or refunded.
+
+                    </Modal.Body>
+                    <hr />
+                    <div className='d-flex justify-content-between align-items-center p-1 flex-column mb-3'>
+                        <div className="row">
+                            <div className="col-md-6 w-50">
+                                <Button variant="secondary" className='btn btn-outline-danger bg-light w-100' onClick={handleClose}>
+                                    Cancel
+                                </Button>
+                            </div>
+                            <div className="col-md-6 w-50">
+                                <Link to={'/CartFunctionality'}><Button variant="primary" className='btn btn-danger w-100' onClick={handleClose}>
+                                    Accept
+                                </Button></Link>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </Modal>
 
             </div>
 

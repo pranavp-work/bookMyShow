@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function UserHeader() {
   return (
@@ -37,7 +38,7 @@ function UserHeader() {
             <button className='border-1 border-dark p-1'>Kochi</button>
           </div>
           <div className="col-md-1">
-            <button className='border-0'>Hi, Guest</button>
+            <Link to={'/ProfileFunctionality'}><button className='border-0'>Hi, Guest</button></Link>
           </div>
         </div>
       </nav>
