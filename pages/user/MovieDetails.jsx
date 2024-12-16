@@ -1,7 +1,17 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 function MovieDetails() {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
             {/* <div className='mb-5'>
@@ -47,7 +57,17 @@ function MovieDetails() {
                                 Fantasy
                                 • U • 29 Nov, 2024
                             </p>
-                            <button className='p-2 bg-danger border-danger text-light w-50'>Book Tickets</button>
+                            <button className='p-2 bg-danger border-danger text-light w-50' onClick={handleShow}>Book Tickets</button>
+                            <Modal show={show} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Moana 2</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Link to={'/SelectTheatres'}><Button variant="secondary">
+                                        3D
+                                    </Button></Link>
+                                </Modal.Body>
+                            </Modal>
                         </div>
                         <div className="col-md-3"></div>
                         <div className="col-md-2">
