@@ -24,7 +24,7 @@ function UserHeader() {
       <nav className='p-3 container'>
         <div className="row">
           <div className="col-md-2">
-            <h3>BookMoviesNow</h3>
+            <h4 className='text-danger'>BookMoviesNow</h4>
           </div>
           <div className="col-md-4">
             <input type="text" placeholder='Search For Movies' className='w-100 border-grey border-1 rounded'/>
