@@ -6,6 +6,7 @@ import UserHeader from './../components/user/UserHeader';
 import UserFooter from './../components/user/UserFooter';
 import MovieDetails from './../pages/user/MovieDetails';
 import SelectTheatre from './../pages/user/SelectTheatre';
+import SeatSelection from './../pages/user/SeatSelection';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <Routes>
         <Route path='/' element={< UserHome />}></Route>
         <Route path='/MovieDetails' element={< MovieDetails />}></Route>
-        <Route path='/SelectTheatres' element= {< SelectTheatre />}></Route>
+        <Route path='/SelectTheatres' element={< SelectTheatre />}></Route>
+        <Route path='/SeatSelection' element={< SeatSelection />}></Route>
       </Routes>
       <UserFooter />
     </>
