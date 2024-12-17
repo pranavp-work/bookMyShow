@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import UserHome from './../pages/user/UserHome';
 import UserHeader from './../components/user/UserHeader';
 import UserFooter from './../components/user/UserFooter';
@@ -9,9 +9,13 @@ import SelectTheatre from './../pages/user/SelectTheatre';
 import SeatSelection from './../pages/user/SeatSelection';
 import CartFunctionality from './../pages/user/CartFunctionality';
 import ProfileFunctionality from './../pages/user/ProfileFunctionality';
+import { useState } from 'react';
 
 
 function App() {
+
+  const [role, setRole] = useState('user');
+  const location = useLocation();
 
   return (
     <>

@@ -20,7 +20,7 @@ function MovieDetails() {
 
                 </div>
             </div> */}
-            <div className="bg-dark px-5">
+            <div className="px-5" style={{backgroundColor: 'beige'}}>
                 <div className="container d-flex justify-content-center align-items-center" style={{ height: '500px' }}>
                     {/* <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/moana-2-et00387901-1732535881.jpg" className='w-100 h-100' alt="" style={{ objectFit: 'fill', height: '250px' }} /> */}
                     <div className="row" style={{ height: '250px' }}>
