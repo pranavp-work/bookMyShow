@@ -4,7 +4,7 @@ import Wallet from './../../components/user/Wallet';
 import UpdateProfile from './../../components/user/UpdateProfile';
 
 function ProfileFunctionality() {
-    const [selectSection, setSelectSection] = useState(0);
+    const [selectSection, setSelectSection] = useState(1);
     console.log(selectSection);
 
     return (

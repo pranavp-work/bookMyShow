@@ -25,7 +25,7 @@ function UserHeader() {
       <nav className='p-3 container'>
         <div className="row">
           <div className="col-md-2">
-            <h4 className='text-danger'>BookMoviesNow</h4>
+            <Link to = {'/'} style={{textDecorationLine: 'none'}}><h4 className='text-danger'>BookMoviesNow</h4></Link>
           </div>
           <div className="col-md-4">
             <input type="text" placeholder='Search For Movies' className='w-100 border-grey border-1 rounded'/>
