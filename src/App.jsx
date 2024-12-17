@@ -10,6 +10,7 @@ import SeatSelection from './../pages/user/SeatSelection';
 import CartFunctionality from './../pages/user/CartFunctionality';
 import ProfileFunctionality from './../pages/user/ProfileFunctionality';
 import { useState } from 'react';
+import OrderHistory from '../components/user/OrderHistory';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/SeatSelection' element={< SeatSelection />}></Route>
         <Route path='/CartFunctionality' element={< CartFunctionality />}></Route>
         <Route path='/ProfileFunctionality' element={< ProfileFunctionality />}></Route>
+        <Route path='/history' element={<OrderHistory/>}></Route>
       </Routes>
       <UserFooter />
     </>

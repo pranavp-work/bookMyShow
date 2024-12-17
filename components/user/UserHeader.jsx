@@ -1,5 +1,7 @@
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-import { Link } from 'react-router-dom';
+
 
 function UserHeader() {
   return (
@@ -22,24 +24,23 @@ function UserHeader() {
         </div>
       </nav> */}
 
-      <nav className='p-3 container'>
-        <div className="row">
-          <div className="col-md-2">
-            <Link to = {'/'} style={{textDecorationLine: 'none'}}><h4 className='text-danger'>BookMoviesNow</h4></Link>
+      <nav class="d-flex bg-body-tertiary p-4">
+        <h1 className='text-danger  fs-3  me-auto' >BookMyShow</h1>
+        <div className='w-50 me-auto'>
+          <div class="d-flex w-100" role="search">
+
+            <input class="form-control me-2 w-100 me-3" type="search" placeholder="Search for Movies,Events,Plays,Sports and Activities" aria-label="Search" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} style={{ marginLeft: "-45px" }} className='mt-2' />
+
           </div>
-          <div className="col-md-4">
-            <input type="text" placeholder='Search For Movies' className='w-100 border-grey border-1 rounded'/>
-          </div>
-          <div className="col-md-3"></div>
-          <div className="col-md-1">
-            <p className='border border-warning text-warning p-1'>$500</p>
-          </div>
-          <div className="col-md-1">
-            <button className='border-1 border-dark p-1'>Kochi</button>
-          </div>
-          <div className="col-md-1">
-            <Link to={'/ProfileFunctionality'}><button className='border-0'>Hi, Guest</button></Link>
-          </div>
+        </div>
+        <div >
+          <p className='border border-warning text-warning px-3 py-2 me-3'>Kochi</p>
+        </div>
+
+        <div>
+          <button className='btn btn-danger  px-3 py-2'>Sign In</button>
+
         </div>
       </nav>
     </>

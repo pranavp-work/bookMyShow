@@ -1,42 +1,38 @@
+import { faEnvelope, faHeadset, faTicket } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
 function UserFooter() {
   return (
     <>
-      <div className="mt-5 p-3 text-dark bg-dark p-4">
-        <div className="row">
-          <div className="col-md-9  bg-dark">
-            <p className='bg-dark text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia possimus adipisci dolorum! Laborum, dicta velit?</p>
-          </div>
-          <div className="col-md-3 bg-dark">
-            <button className='btn btn-danger w-100 p-1'>Contact Today!</button>
-          </div>
+<div className="container-fluid bg-dark text-light p-4">
+  <div className="row">
+    <div className="col-md-4 p-2 me-auto">
+      <h4 className='mb-3'>BookMyShow</h4>
+      <p style={{textAlign:"justify"}}>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae exercitationem maxime omnis magnam, hic, suscipit amet sunt officiis, ipsa sint obcaecati distinctio velit aspernatur corporis laborum reprehenderit quasi veritatis tempora.
+      </p>
+    </div>
+    <div className="col-md-8 text-center">
+      <button className='btn btn-danger'>Contact Today !</button>
+      <div className="row mt-4">
+        <div className="col-md-4">
+        <FontAwesomeIcon icon={faHeadset} className='fa-2x'/>
+        <p>        24/7 CUSTOMER CARE
+        </p>
         </div>
-        <div className="row mt-5 bg-dark">
-          <div className="col-md-4 bg-dark">
-            <h6 className='text-light bg-dark'>24/7 CUSTOMER CARE</h6>
-          </div>
-          <div className="col-md-4 bg-dark">
-            <h6 className='text-light bg-dark'>RESEND BOOKING CONFIRMATION</h6>
-          </div>
-          <div className="col-md-4 bg-dark">
-            <h6 className='text-light bg-dark'>SUBSCRIBE TO THE LETTER</h6>
-          </div>
+        <div className="col-md-4">
+        <FontAwesomeIcon icon={faTicket} className='fa-2x'/>
+        <p className='fs-6'>RESEND BOOKING CONFIRMATION</p>
         </div>
-
-        <div className='mt-5 bg-dark'>
-          <h6 className='text-light bg-dark'>MOVIES NOW SHOWING IN KOCHI</h6>
-          <div className='d-flex flex-row bg-dark'>
-
-            <p className='bg-dark text-light'>asfaf | </p>
-            <p className='bg-dark text-light'>dgvg | </p>
-            <p className='bg-dark text-light'>sdgdg | </p>
-            <p className='bg-dark text-light'>ffhfh | </p>
-            <p className='bg-dark text-light'>dgfs | </p>
-            <p className='bg-dark text-light'>fgxbxfbx | </p>
-          </div>
+        <div className="col-md-4">
+        <FontAwesomeIcon icon={faEnvelope} className='fa-2x' />
+        <p>SUBCRIBE TO THE NEWSLETTER</p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
     </>
   )
 }
